@@ -1,0 +1,93 @@
+###VUE
+
+####目的：
+
+* 能够将vue框架用于实战
+* 完整开发移动端app
+* 了解组件化、模块化的开发方式
+
+####课程目录：
+
+1.框架介绍（各个框架的对比，例如react，angular2.0等框架，mvvm的详细介绍）
+
+2.vue-cli，搭建脚手架
+
+3.vue-router，前端路由
+ 
+4.vue-router，与后端api的交互
+
+5.es6+eslint 
+
+####MVVM
+mvvm其实分为3个部分，model：数据，js对象；view：DOM；viewmodel: 观察者
+
+在vue中，每个组件都对应一个ViewModel
+
+####WEBPACK
+######入口文件： index.html
+
+######入口js：src/main.js 
+
+引用了vue和各种库
+
+    import Vue from 'vue'
+    import App from './App'
+
+     .....
+    
+    /* eslint-disable no-new */
+    new Vue({       
+      el: '#app',
+      router,
+      template: '<App/>',
+      components: { App }
+    })
+    
+`new Vue`实例化vue，并挂载到body上
+
+######文件层分析
+build 配置项文件夹
+
+config 配置项文件夹
+
+node-model 存放各个以来的文件
+
+src 项目源代码
+
+static 第三方资源
+
+######package.json
+
+入口package.json，配置dev命令
+
+webpack.base文件
+
+entry： 入口js文件
+
+output： 输出配置 。publicPath：绝对路径，filename： 输出的文件名称
+
+resolve： 相关配置，如自动补全文件后缀名等
+
+module：
+ －preloaders: []  loader之前处理
+ 
+ －loaders： 对文件的处理
+ 
+   －include：只检查目录下文件
+   
+   －exclude：排除文件
+   
+   －query：limit:对应的大小；name：超出限制的大小将生成的文件
+   
+hot-reload：热加载，浏览器不用刷新，修改过后的代码将自动加载
+
+dev-server.js文件
+
+proxyTable：代理接口
+
+devMiddlewave：中间件，整合各个文件后所产生成的app.js存在于内存，在文件夹中是找不到的，通过监听8080端口来启动项目。这就是中间件的作用。
+
+
+
+
+
