@@ -35,9 +35,9 @@
     
     height：视频高度 
     
-    playsinline: 内联播放
+    playsinline: 内联播放
     
-    muted：静音
+    muted：静音
 
 `<video id="video1"  muted loop playsinline  width="100%" height="100%" src="https://st-up.meiyaapp.com/2016/11/28/o_1b2kqd7en5pu6h5o2b1qba1a3m3g99080.mp4"></video> `
 
