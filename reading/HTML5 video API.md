@@ -1,5 +1,4 @@
 
->地址：https://www.douban.com/note/158621500/
 
 `<audio> `
 标签属性：
@@ -35,8 +34,12 @@
     width：视频宽度
     
     height：视频高度 
+    
+    playsinline: 内联播放
+    
+    muted：静音
 
-`<videoid="media"src="http://www.abc.com/test.mp4"controls width="400px"heigt="400px"></video> `
+`<video id="video1"  muted loop playsinline  width="100%" height="100%" src="https://st-up.meiyaapp.com/2016/11/28/o_1b2kqd7en5pu6h5o2b1qba1a3m3g99080.mp4"></video> `
 
 获取`HTMLVideoElement`和`HTMLAudioElement`对象 
 
@@ -46,7 +49,7 @@
 
   #### audio和video都可以通过标签获取对象 
 
-`4 Media = document.getElementById("media"); `
+` Media = document.getElementById("media"); `
 
  #### Media方法和属性： 
 
